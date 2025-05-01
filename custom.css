@@ -1,0 +1,33 @@
+ @media(min-width:1400px) {
+     #cont {
+         width: 79%;
+     }
+ }
+
+ .w-lg-75 {
+     width: 75% !important;
+ }
+
+ @media(min-width:768px){
+    #buton{
+        width:auto !important;
+    }
+ }
+ .filtro:hover{
+    text-decoration: underline;
+    cursor: pointer;
+ }
+ .bi-heart{
+    cursor: pointer;
+ }
+ .listado:focus{
+    border:0.2rem solid blueviolet !important;
+    box-shadow:0px 0px 3px 3px blueviolet !important;
+ }
+ .form-select:focus{
+    border:0.1rem solid blueviolet !important;
+    box-shadow: none;
+ }
+ a:hover{
+    color: white;
+ }
