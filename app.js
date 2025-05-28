@@ -5,6 +5,7 @@ const contador2 = document.querySelector('#contador2')
 const boton = document.querySelector('#boton')
 let url = "https://api.escuelajs.co/api/v1/products"
 let resultado = []
+let general = []
 let concatenar = ''
 const porducto = () => {
     fetch(url)
@@ -27,7 +28,7 @@ const porducto = () => {
         })
 
         .catch(() => {
-            alert('Sistemas de compar fallando espere un momento')
+            alert('Sistemas de compras fallando espere un momento')
             console.error('Problemas en el producto')
         })
 }
@@ -62,7 +63,7 @@ const crearproducto = (informacion) => {
 }
 
 const productocarro = (informacion) => {
-return `
+    return `
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3 w-50">
         <div class="card" style="max-height:20rem;">
             <img src="${informacion.img}"
@@ -75,7 +76,6 @@ return `
         </div>
     </div>`
 }
-let general=[]
 let cont = 0
 contador1.textContent = `${cont}`
 contador2.textContent = `${cont}`
@@ -83,22 +83,14 @@ const carrito = (id) => {
     cont++
     contador1.textContent = `${cont}`
     contador2.textContent = `${cont}`
-    let datos = []
     let venta = ''
-    datos = resultado.filter(item => item.idg == id)
-    general.push(datos)
-    console.log(general);
-    
+    let datos = resultado.filter(item => item.idg == id)
     datos.forEach(item => {
+        general.push(item)
+        console.log(general);
         venta += productocarro(item)
 
     })
     contenedor2.innerHTML += venta
-    localStorage.setItem('archivo',JSON.stringify(general))
+    localStorage.setItem('archivo', JSON.stringify(general))
 }
-
-
-
-
-
-
