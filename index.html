@@ -31,7 +31,7 @@
                                         style="bottom:0.5rem; right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;">2</span></i></a>
                             <a href="#"><i class="text-white px-2 bi bi-cart text-black position-relative"><span
                                         class="position-absolute bg-danger rounded-circle text-center"
-                                        style="bottom:0.5rem; right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;">3</span></i></a>
+                                        style="bottom:0.5rem; right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;" id="contador"></span></i></a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                                     style="bottom:0.5rem;  right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;">2</span></i></a>
                         <a href="#"><i class="text-white px-2 bi bi-cart text-black position-relative"><span
                                     class="position-absolute bg-danger rounded-circle text-center"
-                                    style="bottom:0.5rem; right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;">3</span></i></a>
+                                    style="bottom:0.5rem; right:0.5px; font-size:0.9rem; width:1.1rem; height:1.2rem;" id="contador2"></span></i></a>
                     </div>
                 </div>
             </div>
@@ -209,165 +209,28 @@
                     </div>
                 </div>
                 <hr class="mt-5">
-                <div class="row">
-                    <h1 id="ofertas" class="text-center fw-bold mt-5">Productos Destacados</h1>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/ropa normal.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Camiseta Casual</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$24.99<del
-                                        class="text-muted fs-6">$29.99</del></p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
+                <h1 id="ofertas" class="text-center fw-bold mt-5">Productos Destacados</h1>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Poductos En Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3">
-                        <div class="card">
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/zapatillas.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Zapatillas Deportivas</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$59.99</p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
+                    <div class="offcanvas-body">
+                        <div id="contenedor2" class="d-flex flex-wrap">
+
                         </div>
+
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3 ">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/reloj.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Reloj Elegante</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$89.99<del
-                                        class="text-muted fs-6">$120.00</del></p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
+                </div>
+                <div class="row" id="contenedorsa">
+                    <div class="spinner-border m-auto mt-5" role="status">
+                        <span class="visually-hidden">Loading...</span>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3 ">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <div></div>
-                            <img src="./documento/img/Bolsa de mano.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Bolsa de Mano</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$45.99</p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/audifono.jpeg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Auriculares Bluetooth</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$79.99<del
-                                        class="text-muted fs-6">$99.99</del></p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3 ">
-                        <div class="card">
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/gafas.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Gafas de Sol</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$34.99</p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/chaqueta.jpeg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Chaqueta de Invierno</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$129.99</p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-3 ">
-                        <div class="card">
-                            <div class="position-absolute text-white ps-2 pe-2"
-                                style=" background-color: red; font-size:0.7rem; border-radius:0.3rem; top:0.5rem;left:0.5rem;">
-                                Oferta
-                            </div>
-                            <div class="position-absolute   text-black p-1 px-2 mt-1 rounded-circle"
-                                style="top:0.5ren; right:0.5rem; background-color:white; font-size:0.7rem; border-radius:0.3rem;">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <img src="./documento/img/telefono.jpg"
-                                style="object-fit:cover; min-height:12rem; max-height: 12rem;" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fs-6">Smartphone</h5>
-                                <p class="card-text fw-bold fs-5" style="color: #6a11cb;">$399.99<del
-                                        class="text-muted fs-6">$449.99</del></p>
-                                <button class="btn btn-dark w-100" style="background-color:#6a11cb;">Añadir al
-                                    carrito</button>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <button class="btn btn-primary" id="boton" type="button" style="background-color:#6a11cb;" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Ver Productos en carro</button>
                 </div>
             </div>
             <div class="row container-fluid text-center mt-5 py-5" style="background-color: #F9FAFB;">
@@ -420,6 +283,7 @@
         </div>
     </footer>
     <script src="./documento/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
     <script>
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', () => {
